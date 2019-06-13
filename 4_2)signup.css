@@ -1,0 +1,11 @@
+body{
+    background-image : url("volunteerbg.png");
+    background-size: cover;
+}
+table{
+    font-size: 30px;
+}
+h1{
+    font-size: 60px;
+    font-style: "Perpetua";
+}

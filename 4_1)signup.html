@@ -1,0 +1,80 @@
+<html>
+     <head>
+            <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.firestore.js"></script>
+            <script type="text/javascript">
+                function isValidpassword()
+                {
+                    var re=/^[A-Z][a-zA-Z0-9]{7}/;
+                    var s=document.getElementById("password").value;
+                    if (!re.test(s))
+                        alert("Password Length : 8 and first character should be a capital alphabet");
+                    else
+                        return true;
+                }
+                </script>
+                <link rel="stylesheet" type="text/css" href="4_2)signup.css">
+            </head>
+            <body>
+            <h1> Volunteers</h1>
+
+        <div class="content">
+            <form id="add-volunteer">
+                <table>
+                <tr>
+                    <td><label for="name">Full Name</label>
+                    <input type="text" name="fullname"  required></td></tr>
+                    <br>
+                    <tr>
+                    <td><label for="Email Id:">Email Id</label>
+                    <input type="text" name="emailid"  ></td></tr>
+                    <br>
+                    <tr>
+                    <td><label for="phone no:"> Contact No.</label>
+                    <input type="text" name="phonenumber" ></td></tr>
+                    <br>
+                    <tr>
+                    <td><label for = "gender">Gender</label></td></tr>
+                    <tr>
+                    <td><input type="radio" name="gender" value="male" > Male</td>
+                    <td><input type="radio" name="gender" value="female" > Female<br></td>
+                    <td><input type="radio" name="gender" value="other" > Other<br></td></tr>
+                    <tr>
+                    <td><label for="dob">Date Of Birth</label>
+                    <input type="date" name="dob" "></td></tr>
+                    <br>
+                    <tr>
+                     <td><label for="username">Username:</label>
+                    <input type="text" name="username"  required></td></tr>
+                    <br>
+                    <tr>
+                    <td><label for="password">Password:</label>
+                    <input type="password" name="password" required onBlur="isValidpassword();" ><br></td></tr>
+                    <tr>
+                    <td><button> SUBMIT </button></td>
+                    </tr>
+                    <br>
+                </table>
+            </form>
+        
+       
+        </div>
+    
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDLzdAU_y2t9oorEOO57ghx8ZQ4IqyDqcA",
+    authDomain: "women-techies.firebaseapp.com",
+    databaseURL: "https://women-techies.firebaseio.com",
+    projectId: "women-techies",
+    storageBucket: "women-techies.appspot.com",
+    messagingSenderId: "854807333718"
+  };
+  firebase.initializeApp(config);
+  const db=firebase.firestore();
+  db.settings({timestsampsInSnapshots: true})
+</script>
+<script src="sign.js"></script>
+    </body>
+</html>
