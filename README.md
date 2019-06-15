@@ -1,2 +1,3 @@
 # Be-Her-Change
-My First Trial of making a website for the women who need help or are willing to help other women.
+- #GIRLCODE
+This is a website which provides women a platform to help or seek help from other women.
